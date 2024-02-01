@@ -3,7 +3,7 @@ import { MediaItem } from "../types/DBTypes";
 const MediaRow  = (props:{item: MediaItem}) => {
   const  item  = props.item;
   return (
-    <tr key={item.media_id}>
+    <tr>
     <td>
       <img src={item.thumbnail} alt={item.title}  />
     </td>
