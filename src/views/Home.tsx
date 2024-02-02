@@ -1,7 +1,9 @@
 import {MediaItem} from '../types/DBTypes';
-import MediaRow from './MediaRow';
+import MediaRow from '../components/MediaRow';
+
 
 const Home = () => {
+  //const [selectedItem, setSelectedItem] = useState<MediaItem | undefined>();
   const mediaArray: MediaItem[] = [
     {
       media_id: 8,
@@ -38,6 +40,8 @@ const Home = () => {
       created_at: '2024-01-07T20:48:13.000Z',
     },
   ];
+  //console.log(mediaArray);
+
   return (
     <>
       <h2>My Media</h2>
@@ -53,10 +57,17 @@ const Home = () => {
           </tr>
         </thead>
         <tbody>
-          {mediaArray.map((item) => <MediaRow key={item.media_id} item={item} />)}
+          {mediaArray.map((item) => (
+            <MediaRow
+              key={item.media_id}
+              item={item}
+
+            />
+          ))}
         </tbody>
       </table>
     </>
   );
 };
+
 export default Home;
