@@ -4,11 +4,15 @@ import Profile from "./views/Profile";
 import Single from "./views/Single";
 import Upload from "./views/Upload";
 import Layout from "./views/Layout";
+import Example from './components/example';
+
 
 const App = () => {
 
   return (
-    <Router>
+    <>
+    <Example></Example>
+    <Router basename={import.meta.env.BASE_URL}>
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
@@ -18,6 +22,7 @@ const App = () => {
         </Route>
     </Routes>
   </Router>
+  </>
   );
 };
 

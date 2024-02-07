@@ -25,7 +25,7 @@ const Single = () => {
           navigate(-1);
         }}
       >
-        go back
+        Back
       </button>
     </>
   );
