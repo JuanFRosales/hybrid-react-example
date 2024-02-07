@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
-import {MediaItem} from '../types/DBTypes';
+import {MediaItemWithOwner} from '../types/DBTypes';
 
 const MediaRow = (props: {
-  item: MediaItem;
+  item: MediaItemWithOwner;
 }) => {
   const {item}  = props;
 
