@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import {MediaItemWithOwner} from '../types/DBTypes';
 
 const MediaRow = (props: {
-  item: MediaItemWithOwner;
+  item: MediaItemWithOwner
 }) => {
   const {item}  = props;
 
@@ -16,6 +16,7 @@ const MediaRow = (props: {
       <td>{new Date(item.created_at).toLocaleString('fi-FI')}</td>
       <td>{item.filesize}</td>
       <td>{item.media_type}</td>
+      <td>{item.username}</td>
       <td>
         <Link to="/single" state={item}>View</Link>
       </td>
@@ -24,4 +25,3 @@ const MediaRow = (props: {
 };
 
 export default MediaRow;
-

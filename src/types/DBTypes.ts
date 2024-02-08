@@ -4,6 +4,7 @@ type UserLevel = {
 };
 
 type User = {
+  user(user: any): unknown;
   user_id: number;
   username: string;
   password: string;
