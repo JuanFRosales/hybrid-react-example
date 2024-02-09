@@ -1,6 +1,6 @@
 import { useForm } from "../hooks/FormHooks";
 import { useUser } from "../hooks/apiHooks";
-import { User } from "../types/DBTypes";
+
 
 const RegisterForm = () => {
 

@@ -53,12 +53,7 @@ const useUser = () => {
     );
   };
 
-  const postUser = async (user: {
-    username: string;
-    password: string;
-    email: string;
-
-  }) => {
+  const postUser = async (user: Record<string, string>) => {
     const options: RequestInit = {
       method: 'POST',
       headers: {
@@ -66,8 +61,12 @@ const useUser = () => {
       },
       body: JSON.stringify(user),
     };
-    await fetchData<UserResponse>(import.meta.env.VITE_AUTH_API + '/users', options,);
-  }
+
+    await fetchData<UserResponse>(
+      import.meta.env.VITE_AUTH_API + '/users',
+      options,
+    );
+  };
 
   return {getUserByToken, postUser};
 };
