@@ -3,9 +3,11 @@ import { useUserContext } from '../hooks/ContextHooks';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
     const { user } = useUserContext();
+    const location = useLocation();
 
     if (!user) {
-        return <Navigate to="/" />;
+      console.log(location);
+        return <Navigate to="/" replace state={{from: location}} />;
     }
 
     return children;
