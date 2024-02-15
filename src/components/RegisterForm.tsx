@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {useUser} from '../hooks/apiHooks';
-import {useForm} from '../hooks/formHooks';
+import {useForm} from '../hooks/FormHooks';
 
 const RegisterForm = () => {
   const {postUser} = useUser();

@@ -1,4 +1,4 @@
-import {useForm} from '../hooks/formHooks';
+import {useForm} from '../hooks/FormHooks';
 import {Credentials} from '../types/LocalTypes';
 import {useUserContext} from '../hooks/ContextHooks';
 
