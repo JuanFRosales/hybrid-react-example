@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useUserContext } from '../hooks/ContextHooks';
+import {useUserContext} from '../hooks/ContextHooks';
 
 const Profile = () => {
   const {user} = useUserContext();
