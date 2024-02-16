@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/single" element={<Single />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<ProtectedRoute><Logout /></ProtectedRoute>} />
+          <Route path="/examole" element={<Example />} />
         </Route>
       </Routes>
     </UserProvider>
