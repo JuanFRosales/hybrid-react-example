@@ -11,7 +11,7 @@ type Action = {
 
 const initialState: State = {count: 0};
 
-function reducer(state: State, action: Action): State {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'increment':
       return {count: state.count + (action.payload ?? 1)};
@@ -20,16 +20,18 @@ function reducer(state: State, action: Action): State {
     default:
       throw new Error();
   }
-}
+};
 
-export default function Counter() {
+const Counter = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <>
       Count: {state.count}
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+      <button onClick={() => dispatch({type: 'increment', payload: 30})}>+</button>
       <button onClick={() => dispatch({type: 'decrement'})}>-</button>
     </>
   );
-}
+};
+
+export default Counter;

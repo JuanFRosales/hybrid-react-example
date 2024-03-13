@@ -1,9 +1,9 @@
-// UserContext.tsx
 import React, {createContext, useState} from 'react';
 import {UserWithNoPassword} from '../types/DBTypes';
 import {useAuthentication, useUser} from '../hooks/apiHooks';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {AuthContextType, Credentials} from '../types/LocalTypes';
+//import {useAuthentication, useUser} from '../hooks/graphQLHooks';
 
 const UserContext = createContext<AuthContextType | null>(null);
 
@@ -46,8 +46,8 @@ const UserProvider = ({children}: {children: React.ReactNode}) => {
     try {
       // get token from local storage
       const token = localStorage.getItem('token');
-      //  if token exists, get user data from API
       if (token) {
+        // if token exists, get user data from API
         const userResponse = await getUserByToken(token);
         // set user to state
         setUser(userResponse.user);
